@@ -10,28 +10,20 @@ class LabNode(Node):
         self.scan_subscriber = self.create_subscription(LaserScan,'/scan',self.scan_subscriber_handler,10)
         self.cmd_vel_publisher = self.create_publisher(Twist, '/cmd_vel', 10)
 
-        self.front_lidar_val = None
-
         self.timer = self.create_timer(.1, self.timer_callback)
     
     def timer_callback(self):
-        pose = Twist()
-
-        if not self.front_lidar_val or self.front_lidar_val > 0.75:
-            pose.linear.x = 0.5
-        else:
-            pose.linear.x = 0.0
-        
-        self.cmd_vel_publisher.publish(pose)
-
+        pass
 
     # ranges[0] -> back
     # ranges[360] -> front
     # ranges[180] -> right
     # ranges[540] -> left
     def scan_subscriber_handler(self, data):
-        self.front_lidar_val = data.ranges[360]
-        self.print("Front Lidar: " + str(data.ranges[360]))
+        self.print("Lidar @ 0 deg: " + str(data.ranges[0]))
+        self.print("Lidar @ 90 deg: " + str(data.ranges[180]))
+        self.print("Lidar @ 180 deg: " + str(data.ranges[360]))
+        self.print("Lidar @ 270 deg: " + str(data.ranges[540]))
 
     # logger print wrapper for debugging
     def print(self, str):
