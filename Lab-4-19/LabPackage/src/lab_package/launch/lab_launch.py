@@ -5,7 +5,7 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='lab_package',
-            executable='publish_vel',
+            executable='lab_publish_vel',
             name='idk'
         )        
     ])
