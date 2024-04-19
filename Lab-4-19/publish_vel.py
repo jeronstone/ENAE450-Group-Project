@@ -16,7 +16,11 @@ class LabNode(Node):
         pass
 
     def scan_subscriber_handler(self, data):
-        pass
+        self.print(" ".join(map(str, data.ranges)))
+
+    # logger print wrapper for debugging
+    def print(self, str):
+        self.get_logger().info(str)
 
 def main(args=None):
     rclpy.init(args=args)
