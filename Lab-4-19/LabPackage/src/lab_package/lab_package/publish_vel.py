@@ -16,7 +16,10 @@ class LabNode(Node):
         pass
 
     def scan_subscriber_handler(self, data):
-        self.print(" ".join(map(str, data.ranges)))
+        self.print("Lidar @ 0 deg: " + str(data.ranges[0]))
+        self.print("Lidar @ 90 deg: " + str(data.ranges[90]))
+        self.print("Lidar @ 180 deg: " + str(data.ranges[180]))
+        self.print("Lidar @ 270 deg: " + str(data.ranges[270]))
 
     # logger print wrapper for debugging
     def print(self, str):
