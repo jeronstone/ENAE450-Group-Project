@@ -18,7 +18,7 @@ class LabNode(Node):
         pose = Twist()
 
         if not self.front_lidar_val or self.front_lidar_val > 0.75:
-            pose.linear.x = 0.5
+            pose.linear.x = 0.25
         else:
             pose.linear.x = 0.0
         
