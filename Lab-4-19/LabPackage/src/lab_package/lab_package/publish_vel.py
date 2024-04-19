@@ -11,16 +11,28 @@ class LabNode(Node):
         self.cmd_vel_publisher = self.create_publisher(Twist, '/cmd_vel', 10)
 
         self.front_lidar_val = None
+        self.turning = False
+        self.turn_c = 0
 
         self.timer = self.create_timer(.1, self.timer_callback)
     
     def timer_callback(self):
         pose = Twist()
 
-        if not self.front_lidar_val or self.front_lidar_val > 0.75:
-            pose.linear.x = 0.25
+        if not self.turning:
+            if not self.front_lidar_val or self.front_lidar_val > 0.75:
+                pose.linear.x = 0.25
+            else:
+                pose.linear.x = 0.0
+                self.turning = True
         else:
-            pose.linear.x = 0.0
+            if self.turn_c < 3:
+                pose.angular.z = 3.14/6.0
+                self.turn_c += 1
+            else:
+                pose.angular.z = 0
+                self.turn_c = 0
+                self.turning = False            
         
         self.cmd_vel_publisher.publish(pose)
 
