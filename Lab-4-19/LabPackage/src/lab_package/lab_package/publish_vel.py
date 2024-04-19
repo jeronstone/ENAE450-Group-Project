@@ -30,7 +30,7 @@ class LabNode(Node):
                 pose.angular.z = 3.14/6.0
                 self.turn_c += 1
             else:
-                pose.angular.z = 0
+                pose.angular.z = 0.0
                 self.turn_c = 0
                 self.turning = False            
         
