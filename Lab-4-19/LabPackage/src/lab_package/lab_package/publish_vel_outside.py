@@ -31,38 +31,37 @@ class LabNode(Node):
         pose = Twist()
 
         if not self.turning:
-            if not self.right_lidar_val or (self.right_lidar_val > 3 and not isinf(self.right_lidar_val)) :
+            if not self.right_lidar_val or (self.right_lidar_val < 3 and not isinf(self.right_lidar_val)) :
                 pose.linear.x = 0.1
             else:
                 pose.linear.x = 0.0
                 self.turning = True
 
-            if not self.init_travel:
-                # distance correction
-                if self.turn_correction:
-                    self.print("DISTANCE CORRECTION")
-                    if distance - self.right_lidar_val > distance_buffer:
-                        self.print("TOO CLOSE TO WALL: " + str(self.right_lidar_val))
-                        pose.angular.z = -0.2
-                    elif distance - self.right_lidar_val < -distance_buffer:
-                        self.print("TOO FAR FROM WALL: " + str(self.right_lidar_val))
+            # distance correction
+            if self.turn_correction:
+                self.print("DISTANCE CORRECTION")
+                if distance - self.right_lidar_val > distance_buffer:
+                    self.print("TOO CLOSE TO WALL: " + str(self.right_lidar_val))
+                    pose.angular.z = -0.2
+                elif distance - self.right_lidar_val < -distance_buffer:
+                    self.print("TOO FAR FROM WALL: " + str(self.right_lidar_val))
+                    pose.angular.z = 0.2
+                else:
+                    self.turn_correction = False
+                    pose.angular.z = 0.0
+
+            # ang correction
+            else:
+                self.print("ANGLE CORRECTION; diff: " + str(self.right_lidar_val))
+                if abs(self.right_lidar_val) > lidar_alpha_buffer:
+                    if self.right_lidar_val > 0:
+                        self.print("FACING OUTWARDS")
                         pose.angular.z = 0.2
                     else:
-                        self.turn_correction = False
-                        pose.angular.z = 0.0
-
-                # ang correction
+                        self.print("FACING INWARDS")
+                        pose.angular.z = -0.2
                 else:
-                    self.print("ANGLE CORRECTION; diff: " + str(self.right_lidar_val))
-                    if abs(self.right_lidar_val) > lidar_alpha_buffer:
-                        if self.right_lidar_val > 0:
-                            self.print("FACING OUTWARDS")
-                            pose.angular.z = 0.2
-                        else:
-                            self.print("FACING INWARDS")
-                            pose.angular.z = -0.2
-                    else:
-                        pose.angular.z = 0.0
+                    pose.angular.z = 0.0
 
         else:
             self.print("TURNING...")
@@ -74,7 +73,6 @@ class LabNode(Node):
                 self.turn_c = 0
                 self.turning = False
                 self.turn_correction = True
-                self.init_travel = False
         
         self.cmd_vel_publisher.publish(pose)
 
