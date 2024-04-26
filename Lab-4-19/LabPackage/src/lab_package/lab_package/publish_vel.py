@@ -30,8 +30,8 @@ class LabNode(Node):
         pose = Twist()
 
         if not self.turning:
-            if not self.front_lidar_val or self.front_lidar_val > distance:
-                pose.linear.x = 0.25
+            if not self.front_lidar_val or self.front_lidar_val > distance + 0.1:
+                pose.linear.x = 0.1
             else:
                 pose.linear.x = 0.0
                 self.turning = True
@@ -42,10 +42,10 @@ class LabNode(Node):
                     self.print("DISTANCE CORRECTION")
                     if distance - self.left_lidar_val > distance_buffer:
                         self.print("TOO CLOSE TO WALL: " + str(self.left_lidar_val))
-                        pose.angular.z = -0.1
+                        pose.angular.z = -0.2
                     elif distance - self.left_lidar_val < -distance_buffer:
                         self.print("TOO FAR FROM WALL: " + str(self.left_lidar_val))
-                        pose.angular.z = 0.1
+                        pose.angular.z = 0.2
                     else:
                         self.turn_correction = False
                         pose.angular.z = 0.0
@@ -56,10 +56,10 @@ class LabNode(Node):
                     if abs(self.left_lidar_alpha_diff) > lidar_alpha_buffer:
                         if self.left_lidar_alpha_diff > 0:
                             self.print("FACING OUTWARDS")
-                            pose.angular.z = 0.1
+                            pose.angular.z = 0.2
                         else:
                             self.print("FACING INWARDS")
-                            pose.angular.z = -0.1
+                            pose.angular.z = -0.2
                     else:
                         pose.angular.z = 0.0
 
