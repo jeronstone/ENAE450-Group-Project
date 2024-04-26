@@ -23,7 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "lab_publish_vel = lab_package.publish_vel:main"
+            "lab_publish_vel = lab_package.publish_vel:main",
+            "lab_publish_vel_v2 = lab_package.publish_vel_v2:main"
         ],
     },
 )
