@@ -32,7 +32,7 @@ class LabNode(Node):
         twist = Twist()
         if (!self.ranges) return
         a = np.array(self.ranges)
-        a = np.convolve(np.clip(a, 0, MAX_D), [0.2] * 5, mode = 'same')
+        a = np.convolve(np.clip(a, 0.0, MAX_D), [0.2] * 5, mode = 'same')
         m = np.argmin(a)
         theta = m * TO_RADIANS
         d = self.ranges[m]
