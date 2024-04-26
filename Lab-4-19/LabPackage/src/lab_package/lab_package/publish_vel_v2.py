@@ -30,7 +30,8 @@ class LabNode(Node):
     
     def timer_callback(self):
         twist = Twist()
-        if (!self.ranges) return
+        if not self.ranges:
+            return
         a = np.array(self.ranges)
         a = np.convolve(np.clip(a, 0.0, MAX_D), [0.2] * 5, mode = 'same')
         m = np.argmin(a)
