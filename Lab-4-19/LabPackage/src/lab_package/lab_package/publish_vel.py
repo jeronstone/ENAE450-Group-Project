@@ -71,7 +71,8 @@ class LabNode(Node):
                 pose.angular.z = 0.0
                 self.turn_c = 0
                 self.turning = False
-                self.turn_correction = True     
+                self.turn_correction = True
+                self.init_travel = False
         
         self.cmd_vel_publisher.publish(pose)
 
