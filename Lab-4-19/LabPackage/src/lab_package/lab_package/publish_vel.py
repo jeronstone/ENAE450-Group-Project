@@ -38,10 +38,13 @@ class LabNode(Node):
 
             if not self.init_travel:
                 # distance correction
+                self.print("DISTANCE CORRECTION")
                 if self.turn_correction:
                     if distance - self.left_lidar_val > distance_buffer:
+                        self.print("TOO CLOSE TO WALL: " + str(self.left_lidar_val))
                         pose.angular.z = -0.1
                     elif distance - self.left_lidar_val < -distance_buffer:
+                        self.print("TOO FAR FROM WALL: " + str(self.left_lidar_val))
                         pose.angular.z = 0.1
                     else:
                         self.turn_correction = False
@@ -49,10 +52,13 @@ class LabNode(Node):
 
                 # ang correction
                 else:
+                    self.print("ANGLE CORRECTION")
                     if abs(self.left_lidar_alpha_diff) > lidar_alpha_buffer:
                         if self.left_lidar_alpha_diff > 0:
+                            self.print("FACING OUTWARDS")
                             pose.angular.z = 0.1
                         else:
+                            self.print("FACING INWARDS")
                             pose.angular.z = -0.1
                     else:
                         pose.angular.z = 0.0
@@ -76,9 +82,9 @@ class LabNode(Node):
     # ranges[540] -> left
     def scan_subscriber_handler(self, data):
         self.front_lidar_val = data.ranges[360]
-        self.print("Front Lidar: " + str(self.front_lidar_val))
+        #self.print("Front Lidar: " + str(self.front_lidar_val))
         self.left_lidar_val = data.ranges[540]
-        self.print("Left Lidar: " + str(self.left_lidar_val))
+        #self.print("Left Lidar: " + str(self.left_lidar_val))
 
                                      # upper                        # lower
         self.left_lidar_alpha_diff = data.ranges[540-lidar_alpha] - data.ranges[540+lidar_alpha]
