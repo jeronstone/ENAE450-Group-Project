@@ -64,6 +64,7 @@ class LabNode(Node):
                         pose.angular.z = 0.0
 
         else:
+            self.print("TURNING...")
             if self.turn_c < 30:
                 pose.angular.z = -(3.14/6.0)
                 self.turn_c += 1
