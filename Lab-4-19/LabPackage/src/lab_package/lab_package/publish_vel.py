@@ -38,8 +38,8 @@ class LabNode(Node):
 
             if not self.init_travel:
                 # distance correction
-                self.print("DISTANCE CORRECTION")
                 if self.turn_correction:
+                    self.print("DISTANCE CORRECTION")
                     if distance - self.left_lidar_val > distance_buffer:
                         self.print("TOO CLOSE TO WALL: " + str(self.left_lidar_val))
                         pose.angular.z = -0.1
@@ -52,7 +52,7 @@ class LabNode(Node):
 
                 # ang correction
                 else:
-                    self.print("ANGLE CORRECTION")
+                    self.print("ANGLE CORRECTION; diff: " + str(self.left_lidar_alpha_diff))
                     if abs(self.left_lidar_alpha_diff) > lidar_alpha_buffer:
                         if self.left_lidar_alpha_diff > 0:
                             self.print("FACING OUTWARDS")
