@@ -25,7 +25,7 @@ setup(
         'console_scripts': [
             "lab_publish_vel = lab_package.publish_vel:main",
             "lab_publish_vel_v2 = lab_package.publish_vel_v2:main",
-            "lab_publish_vel_outside = lacb_package.publish_vel_outside:main"
+            "lab_publish_vel_outside = lab_package.publish_vel_outside:main"
         ],
     },
 )
