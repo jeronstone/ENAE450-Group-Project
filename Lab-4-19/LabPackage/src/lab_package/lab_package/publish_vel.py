@@ -5,7 +5,7 @@ from geometry_msgs.msg import Twist
  
 distance = 0.3
 lidar_alpha = 15
-lidar_alpha_buffer = 0.1
+lidar_alpha_buffer = 0.01
 distance_buffer = 0.1
 
 class LabNode(Node):
