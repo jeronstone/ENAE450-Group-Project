@@ -35,8 +35,10 @@ class LabNode(Node):
         m = np.argmin(a)
         theta = m * TO_RADIANS
         twist.angular.z = (theta - NORM) * SMOOTHING
-        twist.linear.x = 0.5 if self.ranges[m] < D and (FWD - FWD_ANGLE) < theta < FWD + FWD_ANGLE) else 0
+        d = self.ranges[m]
+        twist.linear.x = 0.0 if d < D else 0.5
         self.cmd_vel_publisher.publish(twist)
+        
     # ranges[0] -> back
     # ranges[360] -> front
     # ranges[180] -> right
