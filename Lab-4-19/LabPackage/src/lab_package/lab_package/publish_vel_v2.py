@@ -5,10 +5,11 @@ from geometry_msgs.msg import Twist
 import numpy as np
 
 PI = np.pi
-D = 0.5
+MIN_D = 0.5
+MAX_D = 2
 NORM = PI / 2
 SMOOTHING = 0.5
-CLIP = 1.5
+SPEED = 0.5
 FWD = PI
 FWD_ANGLE = PI / 4
 
@@ -31,12 +32,14 @@ class LabNode(Node):
         twist = Twist()
         if (!self.ranges) return
         a = np.array(self.ranges)
-        a = np.convolve(np.clip(a, 0, CLIP), [0.2] * 5, mode = 'same')
+        a = np.convolve(np.clip(a, 0, MAX_D), [0.2] * 5, mode = 'same')
         m = np.argmin(a)
         theta = m * TO_RADIANS
-        twist.angular.z = (theta - NORM) * SMOOTHING
         d = self.ranges[m]
-        twist.linear.x = 0.0 if d < D else 0.5
+        twist.angular.x = twist.angular.y = 0
+        twist.angular.z = (theta - NORM) * SMOOTHING if d < 0.8 * (MAX_D - MIN_D) + MIN_D else 0.0
+        twist.linear.y = twist.linear.z = 0
+        twist.linear.x = 0.0 if d < MIN_D else SPEED
         self.cmd_vel_publisher.publish(twist)
         
     # ranges[0] -> back
