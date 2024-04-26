@@ -3,7 +3,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
  
-distance = 0.5
+distance = 0.3
 lidar_alpha = 15
 lidar_alpha_buffer = 0.1
 distance_buffer = 0.1
