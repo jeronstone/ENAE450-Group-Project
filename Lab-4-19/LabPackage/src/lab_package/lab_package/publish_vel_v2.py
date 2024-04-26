@@ -8,7 +8,7 @@ PI = np.pi
 D = 0.5
 NORM = PI / 2
 SMOOTHING = 0.5
-CLIP = 5
+CLIP = 1.5
 FWD = PI
 FWD_ANGLE = PI / 4
 
