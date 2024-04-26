@@ -2,6 +2,11 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
+ 
+distance = 0.5
+lidar_alpha = 15
+lidar_alpha_buffer = 0.1
+distance_buffer = 0.1
 
 class LabNode(Node):
     def __init__(self):
@@ -11,7 +16,12 @@ class LabNode(Node):
         self.cmd_vel_publisher = self.create_publisher(Twist, '/cmd_vel', 10)
 
         self.front_lidar_val = None
+        self.left_lidar_val = None
+        self.left_lidar_alpha_diff = None
         self.turning = False
+        self.init_travel = True
+
+        self.turn_correction = True # true => dist ; false => ang
         self.turn_c = 0
 
         self.timer = self.create_timer(.1, self.timer_callback)
@@ -20,19 +30,42 @@ class LabNode(Node):
         pose = Twist()
 
         if not self.turning:
-            if not self.front_lidar_val or self.front_lidar_val > 0.75:
+            if not self.front_lidar_val or self.front_lidar_val > distance:
                 pose.linear.x = 0.25
             else:
                 pose.linear.x = 0.0
                 self.turning = True
+
+            if not self.init_travel:
+                # distance correction
+                if self.turn_correction:
+                    if distance - self.left_lidar_val > distance_buffer:
+                        pose.angular.z = -0.1
+                    elif distance - self.left_lidar_val < -distance_buffer:
+                        pose.angular.z = 0.1
+                    else:
+                        self.turn_correction = False
+                        pose.angular.z = 0.0
+
+                # ang correction
+                else:
+                    if abs(self.left_lidar_alpha_diff) > lidar_alpha_buffer:
+                        if self.left_lidar_alpha_diff > 0:
+                            pose.angular.z = 0.1
+                        else:
+                            pose.angular.z = -0.1
+                    else:
+                        pose.angular.z = 0.0
+
         else:
-            if self.turn_c < 3:
-                pose.angular.z = 3.14/6.0
+            if self.turn_c < 30:
+                pose.angular.z = -(3.14/6.0)
                 self.turn_c += 1
             else:
                 pose.angular.z = 0.0
                 self.turn_c = 0
-                self.turning = False            
+                self.turning = False
+                self.turn_correction = True     
         
         self.cmd_vel_publisher.publish(pose)
 
@@ -43,7 +76,12 @@ class LabNode(Node):
     # ranges[540] -> left
     def scan_subscriber_handler(self, data):
         self.front_lidar_val = data.ranges[360]
-        self.print("Front Lidar: " + str(data.ranges[360]))
+        self.print("Front Lidar: " + str(self.front_lidar_val))
+        self.left_lidar_val = data.ranges[540]
+        self.print("Left Lidar: " + str(self.left_lidar_val))
+
+                                     # upper                        # lower
+        self.left_lidar_alpha_diff = data.ranges[540-lidar_alpha] - data.ranges[540+lidar_alpha]
 
     # logger print wrapper for debugging
     def print(self, str):
