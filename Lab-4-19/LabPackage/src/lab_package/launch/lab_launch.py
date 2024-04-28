@@ -6,6 +6,9 @@ def generate_launch_description():
         Node(
             package='lab_package',
             executable='lab_publish_vel',
-            name='idk'
+            name='idk',
+            parameters=[
+                {'wall_dist': 0.3, 'clockwise': False}
+            ]
         )        
     ])
