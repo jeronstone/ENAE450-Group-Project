@@ -8,7 +8,7 @@ def generate_launch_description():
             executable='lab_publish_vel',
             name='idk',
             parameters=[
-                {'wall_dist': 0.3, 'clockwise': False}
+                {'wall_dist': 0.5, 'clockwise': True}
             ]
         )        
     ])
