@@ -5,15 +5,17 @@ from geometry_msgs.msg import Twist
 import numpy as np
 
 PI = np.pi
-DANGER = 0.2
+DANGER = 0.175
 IDEAL = 0.35
 MAX = 0.6
 SPEED = 0.5
 BACKUP = 0.1
 NORM = PI / 2
 FWD = PI
-NORMSEARCH_MIN = 0
-NORMSEARCH_MAX = PI * 1.25
+NORMSEARCH_MIN = PI * 0.25
+NORMSEARCH_MAX = PI * 0.9
+FWDSEARCH_MIN = PI * 0.75
+FWDSEARCH_MAX = PI * 1.25
 TO_RAD = PI / 360.0
 HOLD_WEIGHT = 2.0
 FOLLOW_WEIGHT = 2.0
@@ -21,8 +23,10 @@ FOLLOW_WEIGHT = 2.0
 PUSH_CONST = IDEAL - DANGER
 PULL_CONST = MAX - IDEAL
 
-SEARCHMIN_I = int(NORMSEARCH_MIN / TO_RAD)
-SEARCHMAX_I = int(NORMSEARCH_MAX / TO_RAD)
+NORMSEARCHMIN_I = int(NORMSEARCH_MIN / TO_RAD)
+NORMSEARCHMAX_I = int(NORMSEARCH_MAX / TO_RAD)
+FWDSEARCHMIN_I = int(FWDSEARCH_MIN / TO_RAD)
+FWDSEARCHMAX_I = int(FWDSEARCH_MAX / TO_RAD)
 
 FPS = 10.0
 
@@ -43,22 +47,31 @@ class LabNode(Node):
     twist.angular.z = 0.0
     twist.angular.x = twist.angular.y = 0.0
     casts = np.convolve(np.clip(self.ranges, 0.0, MAX+0.5), [0.2] * 5, mode = 'same')
-    n_i = np.argmin(casts[SEARCHMIN_I : SEARCHMAX_I]) + SEARCHMIN_I
+    n_i = np.argmin(casts[NORMSEARCHMIN_I : NORMSEARCHMAX_I]) + NORMSEARCHMIN_I
+    f_i = np.argmin(casts[FWDSEARCHMIN_I : FWDSEARCHMAX_I]) + FWDSEARCHMIN_I
     c_i = np.argmin(casts)
     norm = casts[n_i]
     close = casts[c_i]
+    fwd = casts[f_i]
     if close <= DANGER:
       self.get_logger().info("DANGER")
       theta = c_i * TO_RAD
       lin_dir = np.cos(theta)
       ang_dir = np.sin(theta)
-      self.get_logger().info(f"{np.abs(theta - FWD)}")
+      self.get_logger().info(f"{fwd} {f_i * TO_RAD}")
       twist.linear.x = BACKUP * lin_dir
       twist.angular.z = ang_dir
-      self.get_logger().info(f"{twist.linear.x} {twist.angular.z}")
+      self.get_logger().info(f"EEE{twist.linear.x} {twist.angular.z}")
       self.cmd_vel_publisher.publish(twist)
       return
-    elif norm < MAX:
+    if fwd <= (IDEAL + MAX) / 2.0:
+      self.get_logger().info("FWD TURN")
+      theta = f_i * TO_RAD
+      twist.linear.x = BACKUP
+      twist.angular.z = FOLLOW_WEIGHT * (theta - NORM)
+      self.cmd_vel_publisher.publish(twist)
+      return
+    if norm < MAX:
       self.get_logger().info("FOLLOWING NORM")
       theta = n_i * TO_RAD
       twist.linear.x = SPEED
