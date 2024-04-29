@@ -13,4 +13,4 @@ and stays a distance of 0.5 from the wall. Edit the parameters in the launch fil
 
 Part 3: Turtbot: Outside wall following
 Once in the workspace, run this command in the second terminal:
-ros3 run lab_package lab_publish_vel_v2
+ros2 run lab_package lab_publish_vel_v2
