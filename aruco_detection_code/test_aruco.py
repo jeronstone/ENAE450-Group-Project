@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
+from final_project_interface.srv import ArucoDetectSrv
 import cv2
 from time import sleep
 
@@ -14,6 +15,7 @@ class TestNode(Node):
 
         # TODO update topic name I think
         self.scan_subscriber = self.create_subscription(Image,'/image_raw',self.frame_handler,10)
+        self.aruco_client = self.create_client(ArucoDetectSrv, '/aruco_detected')
 
     # Handles each camera frame
     def frame_handler(image_data, self):
@@ -26,10 +28,18 @@ class TestNode(Node):
         (corners, ids, rejected) = detector.detectMarkers(frame)
 
         self.print("Detected: -----------")
-        self.print(' '.join(str(x) for x in corners))
+        self.print(';;'.join(','.join(str(y) for y in x) for x in corners))
         self.print("IDs: ")
-        self.print(' '.join(str(x) for x in ids))
+        self.print(';;'.join(str(x) for x in ids))
         self.print("---------------------")
+
+        # if ids detected, publish to client
+        if len(ids) > 0:
+            req = ArucoDetectSrv.Request()
+            req.corners = corners
+            req.ids = ids
+        
+            self.aruco_client.call_async(req)
 
         # draw aruco on frame
         aruco_frame = cv2.aruco.drawDetectedMarkers(frame, corners)
