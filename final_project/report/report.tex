@@ -1,7 +1,33 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{listings} % For code snippets
+\usepackage{xcolor}
 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 \title{ENAE450 Final Project Report}
 \author{Brandon Newman, Sriman Selvakumaran, Adithya Sundar, Joshua Stone}
@@ -32,30 +58,30 @@ For Aruco marker detection, our team used the opencv library to analyze the came
 First, we import opencv (\verb|cv2|) and define the aruco detection variables. We also import the \verb|Image| class for the camera subscriber:
 
 \begin{lstlisting}
-    import cv2
-    from sensor_msgs.msg import Image
+import cv2
+from sensor_msgs.msg import Image
 
-    dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_1000)
-    parameters = cv2.aruco.DetectorParameters()
-    detector = cv2.aruco.ArucoDetector(dictionary, parameters)
+dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_1000)
+parameters = cv2.aruco.DetectorParameters()
+detector = cv2.aruco.ArucoDetector(dictionary, parameters)
 \end{lstlisting}
 
 Next, we created a subscriber to the \verb|/image_raw| topic to get the camera data from the turtlebot:
 
 \begin{lstlisting}
-    self.scan_subscriber = self.create_subscription(
-        Image,'/image_raw',self.frame_handler,10)
+self.scan_subscriber = self.create_subscription(
+    Image,'/image_raw',self.frame_handler,10)
 \end{lstlisting}
 
 In the subscriber callback function, we use the open cv library to detect arucos on the frame:
 
 \begin{lstlisting}
-    def frame_handler(image_data, self):
-        # get camera frame data
-        frame = image_data.data
+def frame_handler(image_data, self):
+    # get camera frame data
+    frame = image_data.data
 
-        # detect arucos
-        (corners, ids, rejected) = detector.detectMarkers(frame)
+    # detect arucos
+    (corners, ids, rejected) = detector.detectMarkers(frame)
 \end{lstlisting}
 
 TODO explain how we interfaced this with rest of code
