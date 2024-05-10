@@ -38,7 +38,7 @@ FPS = 10.0
 
 class LabNode(Node):
   def __init__(self):
-      super().__init__('wallrider_v2')
+      super().__init__('wallrider')
       self.get_logger().info("starting")
       # read from scan
       self.scan_subscriber = self.create_subscription(LaserScan,'/scan',self.scan_subscriber_handler, 10)
