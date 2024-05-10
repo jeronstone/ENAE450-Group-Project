@@ -23,8 +23,8 @@ FOLLOW_WEIGHT = 2.0  # angular weighting to consider following the wall in the f
 # direction of wall we should be following, e.g. right wall (rad)
 NORM = PI / 2
 # search between MIN and MAX for closest raycast on the right
-NORMSEARCH_MIN = 2 * NORM * 0.25
-NORMSEARCH_MAX = 2 * NORM * 0.85
+NORMSEARCH_MIN = PI * 0.25
+NORMSEARCH_MAX = PI * 0.85
 NORMSEARCHMIN_I = int(NORMSEARCH_MIN / TO_RAD)
 NORMSEARCHMAX_I = int(NORMSEARCH_MAX / TO_RAD)
 # some precalculations here
@@ -71,7 +71,7 @@ class LabNode(Node):
         # f_i / fwd: index / distance from foward wall
         # c_i / close: index / distance from closest object (in any direction)
         n_i = np.argmin(
-            casts[(self.right * NORMSEARCHMIN_I): (self.right * NORMSEARCHMAX_I)]) + (self.right * NORMSEARCHMIN_I)
+            casts[int(self.right * NORMSEARCHMIN_I): int(self.right * NORMSEARCHMAX_I)]) + int(self.right * NORMSEARCHMIN_I)
         c_i = np.argmin(casts)
         f_i = np.argmin(casts[FWDSEARCHMIN_I: FWDSEARCHMAX_I]) + FWDSEARCHMIN_I
         norm = casts[n_i]
