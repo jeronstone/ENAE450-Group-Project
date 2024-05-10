@@ -68,17 +68,17 @@ Our team used ROS2 and Python to implement the following navigation algorithm on
 To start, our navigation ROS node subscribed to the Lidar sensor data topic (\verb|/scan|), and created a publisher for the \verb|/cmd_vel| to move the turtlebot.
 
 \begin{lstlisting}
-    self.scan_subscriber = self.create_subscription(
-        LaserScan,'/scan',self.scan_subscriber_handler, 10)
-    self.cmd_vel_publisher = self.create_publisher(
-        Twist, '/cmd_vel', 10)
+self.scan_subscriber = self.create_subscription(
+    LaserScan,'/scan',self.scan_subscriber_handler, 10)
+self.cmd_vel_publisher = self.create_publisher(
+    Twist, '/cmd_vel', 10)
 \end{lstlisting}
 
 \subsubsection{Aruco Marker Detection}
 
-Additionally, our team used the turtlebot's front facing camera to detect Aruco markers. This was done as part of the bonus points for the project. For Aruco marker detection, our team used the opencv library to analyze the camera frame from the turtlebot. \par
+Additionally, our team used the turtlebot's front facing camera to detect Aruco markers. This was done as part of the bonus points for the project. For Aruco marker detection, our team used the opencv library to analyze the camera frame from the turtlebot. We created another ROS node to perform Aruco detection, communicating with the navigation node via a service. Both nodes are spawned from the launch file. \par
 
-First, we import opencv (\verb|cv2|) and define the aruco detection variables. We also import the \verb|Image| class for the camera subscriber:
+First, we import opencv (\verb|cv2|) and define the aruco detection variables. We also import the \verb|Image| class for the camera subscriber, and the custom service message \verb|ArucoDetectSrv| for the service client:
 
 \begin{lstlisting}
 import cv2
@@ -89,11 +89,13 @@ parameters = cv2.aruco.DetectorParameters()
 detector = cv2.aruco.ArucoDetector(dictionary, parameters)
 \end{lstlisting}
 
-Next, we created a subscriber to the \verb|/image_raw| topic to get the camera data from the turtlebot:
+Next, we created a subscriber to the \verb|/image_raw| topic to get the camera data from the turtlebot. We also create a publisher to the aruco detection service.
 
 \begin{lstlisting}
 self.scan_subscriber = self.create_subscription(
     Image,'/image_raw',self.frame_handler,10)
+self.aruco_client = self.create_client(
+    ArucoDetectSrv, '/aruco_detected')
 \end{lstlisting}
 
 In the subscriber callback function, we use the open cv library to detect arucos on the frame:
@@ -107,7 +109,17 @@ def frame_handler(image_data, self):
     (corners, ids, rejected) = detector.detectMarkers(frame)
 \end{lstlisting}
 
-TODO explain how we interfaced this with rest of code
+Then, we send these results to the navigation script via service call:
+
+\begin{lstlisting}
+# if ids detected, publish to client
+if len(ids) > 0:
+    req = ArucoDetectSrv.Request()
+    req.corners = corners
+    req.ids = ids
+
+    self.aruco_client.call_async(req)
+\end{lstlisting}
 
 \subsection{Results}
 
