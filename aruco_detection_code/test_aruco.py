@@ -13,8 +13,6 @@ class TestNode(Node):
 
         # TODO update topic name I think
         self.scan_subscriber = self.create_subscription(Image,'/image_raw',self.frame_handler,10)
-        self.aruco_publisher = self.create_publisher(Image, '/image_aruco', 10)
-
 
     # Handles each camera frame
     def frame_handler(image_data, self):
