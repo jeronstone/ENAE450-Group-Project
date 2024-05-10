@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import CompressedImage
 from interface_package.srv import ArucoDetectSrv
 import cv2
 from time import sleep
