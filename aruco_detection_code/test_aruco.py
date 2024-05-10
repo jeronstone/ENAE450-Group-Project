@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 import cv2
+from time import sleep
 
 dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_1000)
 parameters = cv2.aruco.DetectorParameters()
@@ -34,7 +35,9 @@ class TestNode(Node):
         aruco_frame = cv2.aruco.drawDetectedMarkers(frame, corners)
         
         # TODO will this work?
+        # What we could do is create a publisher that publishes the frame and we can use rqt viewer
         cv2.imshow(aruco_frame) 
+        sleep(10) # otherwise the imshow will not work since function is called for every new frame
 
     # logger print wrapper for debugging
     def print(self, str):
