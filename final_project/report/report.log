@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.5.3)  9 MAY 2024 23:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.5.3)  10 MAY 2024 00:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -135,13 +135,13 @@ Overfull \hbox (43.0489pt too wide) in paragraph at lines 38--38
 Here is how much of TeX's memory you used:
  3236 strings out of 483183
  43806 string characters out of 5966293
- 308400 words of memory out of 5000000
+ 329400 words of memory out of 5000000
  18269 multiletter control sequences out of 15000+600000
  536929 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 30i,6n,37p,282b,1597s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,6n,37p,332b,1598s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on /home/jstone14/ENAE450-Group-Project/final_project/report/report.pdf (2 pages, 98491 bytes).
+Output written on /home/jstone14/ENAE450-Group-Project/final_project/report/report.pdf (2 pages, 104891 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  30 compressed objects within 1 object stream

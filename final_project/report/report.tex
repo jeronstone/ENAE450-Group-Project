@@ -39,9 +39,19 @@
 
 \section{Introduction}
 
+The following report is for our group's final project for ENAE450. The final project required us to navigate a maze using the Turtlebot3 Waffe Pi. \par
+We utilized ROS2 and Python (\verb|rospy|) to program the navigation code, which utilzed the turtlebot's lidar sensor and camera. \par
+The navigation code was tested using the physical robot (See section 3), as well as simulated Gazebo runs (See section 2). 
+
 \section{Simulation}
 
 \subsection{Methods}
+
+\subsubsection{Introduction}
+
+Our team utilized ROS2, Python, and Gazebo to simulate the navigation for the Turtlebot3 Waffle Pi.
+
+\subsubsection{Navigation Code}
 
 \subsection{Results}
 
@@ -49,11 +59,24 @@
 
 \subsection{Methods}
 
+\subsubsection{Introduction}
+
+Our team used ROS2 and Python to implement the following navigation algorithm on the Turtlebot3 Waffle Pi. The code utilizes the Lidar sensor and the front camera.
+
 \subsubsection{Navigation with Lidar}
+
+To start, our navigation ROS node subscribed to the Lidar sensor data topic (\verb|/scan|), and created a publisher for the \verb|/cmd_vel| to move the turtlebot.
+
+\begin{lstlisting}
+    self.scan_subscriber = self.create_subscription(
+        LaserScan,'/scan',self.scan_subscriber_handler, 10)
+    self.cmd_vel_publisher = self.create_publisher(
+        Twist, '/cmd_vel', 10)
+\end{lstlisting}
 
 \subsubsection{Aruco Marker Detection}
 
-For Aruco marker detection, our team used the opencv library to analyze the camera frame from the turtlebot. \par
+Additionally, our team used the turtlebot's front facing camera to detect Aruco markers. This was done as part of the bonus points for the project. For Aruco marker detection, our team used the opencv library to analyze the camera frame from the turtlebot. \par
 
 First, we import opencv (\verb|cv2|) and define the aruco detection variables. We also import the \verb|Image| class for the camera subscriber:
 
