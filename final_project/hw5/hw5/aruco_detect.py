@@ -13,12 +13,13 @@ class ArucoNode(Node):
     def __init__(self):
         super().__init__('aruco_detection_node')
 
-        # TODO update topic name I think
+        self.print('Initialized Node')
         self.scan_subscriber = self.create_subscription(Image,'/camera/image_raw/compressed',self.frame_handler,10)
+        self.print('Created Subscriber to /camera/image_raw/compressed')
         #self.aruco_client = self.create_client(ArucoDetectSrv, '/aruco_detected')
 
     # Handles each camera frame
-    def frame_handler(image_data, self):
+    def frame_handler(self, image_data):
         self.print("Got Frame {image_data.header.frame_id} @ {image_data.header.stamp}")
 
         # get camera frame data
