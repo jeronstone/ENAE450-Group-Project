@@ -1,1 +1,0 @@
-/home/jstone14/ENAE450_ws/src/build/interface_package/rosidl_generator_cpp/interface_package/srv/aruco_detect_srv.hpp
