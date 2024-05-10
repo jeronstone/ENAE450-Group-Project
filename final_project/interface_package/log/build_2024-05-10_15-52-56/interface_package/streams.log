@@ -1,0 +1,201 @@
+[0.016s] Invoking command in '/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/jstone14/ENAE450_ws/src/interface_package -DCMAKE_INSTALL_PREFIX=/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package
+[0.028s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.142s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.152s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.179s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.182s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.187s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.198s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.213s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.270s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.272s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.417s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.573s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.908s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.277s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.399s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.423s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.428s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.465s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.465s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.465s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.465s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.486s] -- Found PythonExtra: .so  
+[1.538s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.608s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.609s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_generator_c>;$<BUILD_INTERFACE:/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_typesupport_fastrtps_c>;$<BUILD_INTERFACE:/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_generator_cpp>;$<BUILD_INTERFACE:/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_typesupport_fastrtps_cpp>;$<BUILD_INTERFACE:/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_typesupport_introspection_cpp>;/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_generator_c;/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_generator_py
+[1.609s] -- Configured cppcheck exclude dirs and/or files: 
+[1.613s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.616s] -- Added test 'lint_cmake' to check CMake code style
+[1.619s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.631s] -- Added test 'uncrustify' to check C / C++ code style
+[1.631s] -- Configured uncrustify additional arguments: 
+[1.634s] -- Added test 'xmllint' to check XML markup files
+[1.642s] -- Configuring done
+[1.683s] -- Generating done
+[1.686s] -- Build files have been written to: /home/jstone14/ENAE450_ws/src/interface_package/build/interface_package
+[1.698s] Invoked command in '/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/jstone14/ENAE450_ws/src/interface_package -DCMAKE_INSTALL_PREFIX=/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package
+[1.701s] Invoking command in '/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/jstone14/ENAE450_ws/src/interface_package/build/interface_package -- -j4 -l4
+[1.756s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.772s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.781s] [  6%] Built target ament_cmake_python_symlink_interface_package
+[2.239s] running egg_info
+[2.241s] creating interface_package.egg-info
+[2.241s] writing interface_package.egg-info/PKG-INFO
+[2.242s] writing dependency_links to interface_package.egg-info/dependency_links.txt
+[2.243s] writing top-level names to interface_package.egg-info/top_level.txt
+[2.243s] writing manifest file 'interface_package.egg-info/SOURCES.txt'
+[2.249s] reading manifest file 'interface_package.egg-info/SOURCES.txt'
+[2.251s] writing manifest file 'interface_package.egg-info/SOURCES.txt'
+[2.261s] [  6%] Built target interface_package__cpp
+[2.283s] [  9%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.295s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.302s] [ 12%] Built target ament_cmake_python_build_interface_package_egg
+[2.306s] [ 16%] [32mBuilding C object CMakeFiles/interface_package__rosidl_generator_c.dir/rosidl_generator_c/interface_package/srv/detail/aruco_detect_srv__functions.c.o[0m
+[2.323s] [ 19%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.422s] [ 22%] [32m[1mLinking C shared library libinterface_package__rosidl_generator_c.so[0m
+[2.478s] [ 22%] Built target interface_package__rosidl_generator_c
+[2.490s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.577s] [ 29%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interface_package/srv/aruco_detect_srv__type_support.cpp.o[0m
+[2.616s] [ 32%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interface_package/srv/detail/dds_fastrtps/aruco_detect_srv__type_support.cpp.o[0m
+[2.647s] [ 35%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interface_package/srv/detail/aruco_detect_srv__type_support.cpp.o[0m
+[2.854s] [ 38%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interface_package/srv/detail/aruco_detect_srv__type_support_c.cpp.o[0m
+[3.963s] [ 41%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_cpp.so[0m
+[4.013s] [ 41%] Built target interface_package__rosidl_typesupport_cpp
+[4.024s] [ 45%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.238s] [ 48%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.251s] [ 51%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_introspection_cpp.so[0m
+[4.301s] [ 51%] Built target interface_package__rosidl_typesupport_introspection_cpp
+[4.315s] [ 54%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[4.325s] [ 58%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_fastrtps_c.so[0m
+[4.367s] [ 58%] Built target interface_package__rosidl_typesupport_fastrtps_cpp
+[4.458s] [ 58%] Built target interface_package__rosidl_typesupport_fastrtps_c
+[4.459s] [ 61%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interface_package/srv/detail/aruco_detect_srv__type_support.c.o[0m
+[4.497s] [ 64%] [32m[1mLinking C shared library libinterface_package__rosidl_typesupport_introspection_c.so[0m
+[4.524s] [ 64%] Built target interface_package__rosidl_typesupport_introspection_c
+[4.561s] [ 67%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/interface_package/srv/aruco_detect_srv__type_support.cpp.o[0m
+[4.594s] [ 70%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_c.so[0m
+[4.632s] [ 70%] Built target interface_package__rosidl_typesupport_c
+[4.651s] [ 70%] Built target interface_package
+[4.671s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.064s] [ 74%] Built target interface_package__py
+[5.089s] [ 77%] [32mBuilding C object CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interface_package/srv/_aruco_detect_srv_s.c.o[0m
+[5.241s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/interface_package/libinterface_package__rosidl_generator_py.so[0m
+[5.278s] [ 80%] Built target interface_package__rosidl_generator_py
+[5.299s] [ 83%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/interface_package/_interface_package_s.ep.rosidl_typesupport_c.c.o[0m
+[5.304s] [ 90%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/interface_package/_interface_package_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.304s] [ 90%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/interface_package/_interface_package_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.391s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.397s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.400s] [100%] [32m[1mLinking C shared library rosidl_generator_py/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.424s] [100%] Built target interface_package__rosidl_typesupport_c__pyext
+[5.433s] [100%] Built target interface_package__rosidl_typesupport_introspection_c__pyext
+[5.438s] [100%] Built target interface_package__rosidl_typesupport_fastrtps_c__pyext
+[5.454s] Invoked command in '/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/jstone14/ENAE450_ws/src/interface_package/build/interface_package -- -j4 -l4
+[5.518s] Invoking command in '/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/jstone14/ENAE450_ws/src/interface_package/build/interface_package
+[5.526s] -- Install configuration: ""
+[5.527s] -- Execute custom install script
+[5.527s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/ament_index/resource_index/rosidl_interfaces/interface_package
+[5.536s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/msg/rosidl_generator_c__visibility_control.h
+[5.544s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/aruco_detect_srv.h
+[5.554s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__functions.h
+[5.562s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__struct.h
+[5.571s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__type_support.h
+[5.580s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/environment/library_path.sh
+[5.588s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/environment/library_path.dsv
+[5.598s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.605s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__rosidl_typesupport_fastrtps_c.h
+[5.615s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/aruco_detect_srv.hpp
+[5.624s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__builder.hpp
+[5.632s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__struct.hpp
+[5.640s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__traits.hpp
+[5.648s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.657s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__rosidl_typesupport_fastrtps_cpp.hpp
+[5.666s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.676s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__rosidl_typesupport_introspection_c.h
+[5.686s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/include/interface_package/interface_package/srv/detail/aruco_detect_srv__rosidl_typesupport_introspection_cpp.hpp
+[5.695s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/environment/pythonpath.sh
+[5.703s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/environment/pythonpath.dsv
+[5.712s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/PKG-INFO
+[5.722s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/SOURCES.txt
+[5.734s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/dependency_links.txt
+[5.742s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/top_level.txt
+[5.750s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/__init__.py
+[5.759s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/_interface_package_s.ep.rosidl_typesupport_c.c
+[5.768s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/_interface_package_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.776s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/_interface_package_s.ep.rosidl_typesupport_introspection_c.c
+[5.785s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.793s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.802s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.810s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/libinterface_package__rosidl_generator_py.so
+[5.819s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/__init__.py
+[5.827s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_aruco_detect_srv.py
+[5.836s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_aruco_detect_srv_s.c
+[5.846s] -- Up-to-date symlink: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.846s] -- Up-to-date symlink: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.846s] -- Up-to-date symlink: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.846s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/srv/ArucoDetectSrv.idl
+[5.857s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/srv/ArucoDetectSrv.srv
+[5.865s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/srv/ArucoDetectSrv_Request.msg
+[5.873s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/srv/ArucoDetectSrv_Response.msg
+[5.881s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/ament_index/resource_index/package_run_dependencies/interface_package
+[5.889s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/ament_index/resource_index/parent_prefix_path/interface_package
+[5.897s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/environment/ament_prefix_path.sh
+[5.905s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/environment/ament_prefix_path.dsv
+[5.912s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/environment/path.sh
+[5.920s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/environment/path.dsv
+[5.928s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/local_setup.bash
+[5.937s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/local_setup.sh
+[5.945s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/local_setup.zsh
+[5.955s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/local_setup.dsv
+[5.963s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/package.dsv
+[5.974s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/ament_index/resource_index/packages/interface_package
+[5.984s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/rosidl_cmake-extras.cmake
+[5.992s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.999s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/ament_cmake_export_libraries-extras.cmake
+[6.007s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/ament_cmake_export_targets-extras.cmake
+[6.015s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.023s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.031s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.038s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_packageConfig.cmake
+[6.046s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_packageConfig-version.cmake
+[6.054s] -- Symlinking: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/package.xml
+[6.063s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_generator_c.so
+[6.064s] -- Set runtime path of "/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_generator_c.so" to ""
+[6.064s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_c.so
+[6.064s] -- Set runtime path of "/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_c.so" to ""
+[6.064s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_cpp.so
+[6.064s] -- Set runtime path of "/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_cpp.so" to ""
+[6.065s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_c.so
+[6.065s] -- Set runtime path of "/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_c.so" to ""
+[6.065s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_c.so
+[6.065s] -- Set runtime path of "/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_c.so" to ""
+[6.065s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_cpp.so
+[6.066s] -- Set runtime path of "/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_cpp.so" to ""
+[6.066s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_cpp.so
+[6.066s] -- Set runtime path of "/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_typesupport_cpp.so" to ""
+[6.104s] Listing '/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package'...
+[6.104s] Compiling '/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/__init__.py'...
+[6.104s] Listing '/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv'...
+[6.104s] Compiling '/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/__init__.py'...
+[6.104s] Compiling '/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_aruco_detect_srv.py'...
+[6.108s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_generator_py.so
+[6.108s] -- Set runtime path of "/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/lib/libinterface_package__rosidl_generator_py.so" to ""
+[6.108s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_cExport.cmake
+[6.108s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_cExport-noconfig.cmake
+[6.108s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cExport.cmake
+[6.108s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.109s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_cppExport.cmake
+[6.109s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.109s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.109s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cExport.cmake
+[6.109s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.109s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cExport.cmake
+[6.110s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cExport-noconfig.cmake
+[6.110s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cppExport.cmake
+[6.110s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.110s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cppExport.cmake
+[6.110s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cppExport-noconfig.cmake
+[6.110s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_pyExport.cmake
+[6.111s] -- Installing: /home/jstone14/ENAE450_ws/src/interface_package/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_pyExport-noconfig.cmake
+[6.113s] Invoked command in '/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/jstone14/ENAE450_ws/src/interface_package/build/interface_package

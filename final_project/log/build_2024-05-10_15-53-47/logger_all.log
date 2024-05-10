@@ -1,0 +1,202 @@
+[0.103s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.103s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7fe6409fa1d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fe6409f9810>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fe6409f9810>>, mixin_verb=('build',))
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.356s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jstone14/ENAE450_ws/src'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(hw5) by extensions ['ignore', 'ignore_ament_install']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(hw5) by extension 'ignore'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(hw5) by extension 'ignore_ament_install'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(hw5) by extensions ['colcon_pkg']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(hw5) by extension 'colcon_pkg'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(hw5) by extensions ['colcon_meta']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(hw5) by extension 'colcon_meta'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(hw5) by extensions ['ros']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(hw5) by extension 'ros'
+[0.380s] DEBUG:colcon.colcon_core.package_identification:Package 'hw5' with type 'ros.ament_python' and name 'hw5'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(interface_package) by extensions ['ignore', 'ignore_ament_install']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(interface_package) by extension 'ignore'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(interface_package) by extension 'ignore_ament_install'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(interface_package) by extensions ['colcon_pkg']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(interface_package) by extension 'colcon_pkg'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(interface_package) by extensions ['colcon_meta']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(interface_package) by extension 'colcon_meta'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(interface_package) by extensions ['ros']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(interface_package) by extension 'ros'
+[0.381s] DEBUG:colcon.colcon_core.package_identification:Package 'interface_package' with type 'ros.ament_cmake' and name 'interface_package'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extensions ['ignore', 'ignore_ament_install']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extension 'ignore'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extension 'ignore_ament_install'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extensions ['colcon_pkg']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extension 'colcon_pkg'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extensions ['colcon_meta']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extension 'colcon_meta'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extensions ['ros']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extension 'ros'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extensions ['cmake', 'python']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extension 'cmake'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extension 'python'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extensions ['python_setup_py']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(report) by extension 'python_setup_py'
+[0.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'hw5' build argument 'cmake_args' from command line to 'None'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'hw5' build argument 'cmake_target' from command line to 'None'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'hw5' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'hw5' build argument 'cmake_clean_cache' from command line to 'False'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'hw5' build argument 'cmake_clean_first' from command line to 'False'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'hw5' build argument 'cmake_force_configure' from command line to 'False'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'hw5' build argument 'ament_cmake_args' from command line to 'None'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'hw5' build argument 'catkin_cmake_args' from command line to 'None'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'hw5' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.400s] DEBUG:colcon.colcon_core.verb:Building package 'hw5' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jstone14/ENAE450_ws/src/build/hw5', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jstone14/ENAE450_ws/src/install/hw5', 'merge_install': False, 'path': '/home/jstone14/ENAE450_ws/src/hw5', 'symlink_install': True, 'test_result_base': None}
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'interface_package' build argument 'cmake_args' from command line to 'None'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'interface_package' build argument 'cmake_target' from command line to 'None'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'interface_package' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'interface_package' build argument 'cmake_clean_cache' from command line to 'False'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'interface_package' build argument 'cmake_clean_first' from command line to 'False'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'interface_package' build argument 'cmake_force_configure' from command line to 'False'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'interface_package' build argument 'ament_cmake_args' from command line to 'None'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'interface_package' build argument 'catkin_cmake_args' from command line to 'None'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'interface_package' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.401s] DEBUG:colcon.colcon_core.verb:Building package 'interface_package' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jstone14/ENAE450_ws/src/build/interface_package', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jstone14/ENAE450_ws/src/install/interface_package', 'merge_install': False, 'path': '/home/jstone14/ENAE450_ws/src/interface_package', 'symlink_install': True, 'test_result_base': None}
+[0.401s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.402s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.402s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jstone14/ENAE450_ws/src/hw5' with build type 'ament_python'
+[0.402s] Level 1:colcon.colcon_core.shell:create_environment_hook('hw5', 'ament_prefix_path')
+[0.404s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/hook/ament_prefix_path.ps1'
+[0.405s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/hook/ament_prefix_path.dsv'
+[0.406s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/hook/ament_prefix_path.sh'
+[0.407s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.407s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.413s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jstone14/ENAE450_ws/src/interface_package' with build type 'ament_cmake'
+[0.413s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jstone14/ENAE450_ws/src/interface_package'
+[0.413s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.413s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.682s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jstone14/ENAE450_ws/src/hw5'
+[0.683s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.683s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.691s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jstone14/ENAE450_ws/src/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/jstone14/ENAE450_ws/src/interface_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jstone14/ENAE450_ws/src/install/interface_package
+[1.348s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jstone14/ENAE450_ws/src/build/hw5': PYTHONPATH=/home/jstone14/ENAE450_ws/src/build/hw5/prefix_override:/home/jstone14/ENAE450_ws/src/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jstone14/ENAE450_ws/src/build/hw5/build --no-deps symlink_data
+[1.926s] Level 1:colcon.colcon_core.shell:create_environment_hook('hw5', 'pythonpath_develop')
+[1.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/build/hw5/share/hw5/hook/pythonpath_develop.ps1'
+[1.927s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jstone14/ENAE450_ws/src/build/hw5/share/hw5/hook/pythonpath_develop.dsv'
+[1.928s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/build/hw5/share/hw5/hook/pythonpath_develop.sh'
+[1.930s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/hw5' for CMake module files
+[1.931s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/hw5' for CMake config files
+[1.931s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/hw5/lib'
+[1.932s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/hw5/bin'
+[1.932s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/hw5/lib/pkgconfig/hw5.pc'
+[1.932s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/hw5/lib/python3.10/site-packages'
+[1.932s] Level 1:colcon.colcon_core.shell:create_environment_hook('hw5', 'pythonpath')
+[1.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/hook/pythonpath.ps1'
+[1.933s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/hook/pythonpath.dsv'
+[1.933s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/hook/pythonpath.sh'
+[1.933s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/hw5/bin'
+[1.934s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hw5)
+[1.934s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/package.ps1'
+[1.935s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/package.dsv'
+[1.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/package.sh'
+[1.936s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jstone14/ENAE450_ws/src/build/hw5' returned '0': PYTHONPATH=/home/jstone14/ENAE450_ws/src/build/hw5/prefix_override:/home/jstone14/ENAE450_ws/src/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jstone14/ENAE450_ws/src/build/hw5/build --no-deps symlink_data
+[1.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/package.bash'
+[1.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/hw5/share/hw5/package.zsh'
+[1.937s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jstone14/ENAE450_ws/src/install/hw5/share/colcon-core/packages/hw5)
+[3.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jstone14/ENAE450_ws/src/build/interface_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/jstone14/ENAE450_ws/src/interface_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jstone14/ENAE450_ws/src/install/interface_package
+[3.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jstone14/ENAE450_ws/src/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/jstone14/ENAE450_ws/src/build/interface_package -- -j4 -l4
+[5.356s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jstone14/ENAE450_ws/src/build/interface_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/jstone14/ENAE450_ws/src/build/interface_package -- -j4 -l4
+[5.425s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jstone14/ENAE450_ws/src/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/jstone14/ENAE450_ws/src/build/interface_package
+[5.993s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interface_package)
+[5.993s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package' for CMake module files
+[5.994s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jstone14/ENAE450_ws/src/build/interface_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/jstone14/ENAE450_ws/src/build/interface_package
+[5.995s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package' for CMake config files
+[5.996s] Level 1:colcon.colcon_core.shell:create_environment_hook('interface_package', 'cmake_prefix_path')
+[5.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/cmake_prefix_path.ps1'
+[5.996s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/cmake_prefix_path.dsv'
+[5.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/cmake_prefix_path.sh'
+[5.997s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/lib'
+[5.997s] Level 1:colcon.colcon_core.shell:create_environment_hook('interface_package', 'ld_library_path_lib')
+[5.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/ld_library_path_lib.ps1'
+[5.998s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/ld_library_path_lib.dsv'
+[5.998s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/ld_library_path_lib.sh'
+[5.998s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/bin'
+[5.998s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/lib/pkgconfig/interface_package.pc'
+[5.998s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/lib/python3.10/site-packages'
+[5.999s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/bin'
+[5.999s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.ps1'
+[5.999s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.dsv'
+[6.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.sh'
+[6.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.bash'
+[6.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.zsh'
+[6.001s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jstone14/ENAE450_ws/src/install/interface_package/share/colcon-core/packages/interface_package)
+[6.060s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interface_package)
+[6.060s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package' for CMake module files
+[6.061s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package' for CMake config files
+[6.061s] Level 1:colcon.colcon_core.shell:create_environment_hook('interface_package', 'cmake_prefix_path')
+[6.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/cmake_prefix_path.ps1'
+[6.062s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/cmake_prefix_path.dsv'
+[6.062s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/cmake_prefix_path.sh'
+[6.063s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/lib'
+[6.063s] Level 1:colcon.colcon_core.shell:create_environment_hook('interface_package', 'ld_library_path_lib')
+[6.063s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/ld_library_path_lib.ps1'
+[6.064s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/ld_library_path_lib.dsv'
+[6.064s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/hook/ld_library_path_lib.sh'
+[6.064s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/bin'
+[6.064s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/lib/pkgconfig/interface_package.pc'
+[6.065s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/lib/python3.10/site-packages'
+[6.065s] Level 1:colcon.colcon_core.environment:checking '/home/jstone14/ENAE450_ws/src/install/interface_package/bin'
+[6.065s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.ps1'
+[6.066s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.dsv'
+[6.066s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.sh'
+[6.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.bash'
+[6.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/jstone14/ENAE450_ws/src/install/interface_package/share/interface_package/package.zsh'
+[6.068s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jstone14/ENAE450_ws/src/install/interface_package/share/colcon-core/packages/interface_package)
+[6.069s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.069s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.069s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.069s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.074s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[6.074s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.074s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.074s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.077s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[6.077s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.078s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jstone14/ENAE450_ws/src/install/local_setup.ps1'
+[6.079s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jstone14/ENAE450_ws/src/install/_local_setup_util_ps1.py'
+[6.080s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jstone14/ENAE450_ws/src/install/setup.ps1'
+[6.082s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jstone14/ENAE450_ws/src/install/local_setup.sh'
+[6.083s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jstone14/ENAE450_ws/src/install/_local_setup_util_sh.py'
+[6.083s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jstone14/ENAE450_ws/src/install/setup.sh'
+[6.085s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jstone14/ENAE450_ws/src/install/local_setup.bash'
+[6.085s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jstone14/ENAE450_ws/src/install/setup.bash'
+[6.086s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jstone14/ENAE450_ws/src/install/local_setup.zsh'
+[6.087s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jstone14/ENAE450_ws/src/install/setup.zsh'

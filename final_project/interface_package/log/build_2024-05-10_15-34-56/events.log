@@ -1,0 +1,74 @@
+[0.000000] (-) TimerEvent: {}
+[0.002310] (interface_package) JobQueued: {'identifier': 'interface_package', 'dependencies': OrderedDict()}
+[0.002429] (interface_package) JobStarted: {'identifier': 'interface_package'}
+[0.012916] (interface_package) JobProgress: {'identifier': 'interface_package', 'progress': 'cmake'}
+[0.013950] (interface_package) Command: {'cmd': ['/usr/bin/cmake', '/home/jstone14/ENAE450_ws/src/interface_package', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/jstone14/ENAE450_ws/src/interface_package/install/interface_package'], 'cwd': '/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package', 'env': OrderedDict([('USER', 'jstone14'), ('HOSTNAME', 'ubuntu'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jstone14/tb3_ws/install/turtlebot3_msgs/lib:/home/jstone14/tb3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/jstone14/tb3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/jstone14'), ('OLDPWD', '/home/jstone14/ENAE450_ws/src'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/jstone14/nav_ws/install:/home/jstone14/tb3_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'graphics,utility,compute'), ('TERM', 'xterm'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('ROS_LOCALHOST_ONLY', '1'), ('QT_X11_NO_MITSHM', '1'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/jstone14/nav_ws/install/sam_bot_description:/home/jstone14/tb3_ws/install/turtlebot3:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_simulations:/home/jstone14/tb3_ws/install/turtlebot3_bringup:/home/jstone14/tb3_ws/install/turtlebot3_node:/home/jstone14/tb3_ws/install/turtlebot3_navigation2:/home/jstone14/tb3_ws/install/turtlebot3_fake_node:/home/jstone14/tb3_ws/install/turtlebot3_example:/home/jstone14/tb3_ws/install/turtlebot3_msgs:/home/jstone14/tb3_ws/install/turtlebot3_gazebo:/home/jstone14/tb3_ws/install/turtlebot3_description:/home/jstone14/tb3_ws/install/turtlebot3_cartographer:/home/jstone14/tb3_ws/install/dynamixel_sdk_examples:/home/jstone14/tb3_ws/install/dynamixel_sdk_custom_interfaces:/home/jstone14/tb3_ws/install/dynamixel_sdk:/opt/ros/humble'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('PWD', '/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('LC_ALL', 'C.UTF-8'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('PYTHONPATH', '/home/jstone14/tb3_ws/build/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jstone14/tb3_ws/build/turtlebot3_example:/home/jstone14/tb3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jstone14/tb3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jstone14/tb3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TZ', 'America/New_York'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/jstone14/nav_ws/install/sam_bot_description:/home/jstone14/tb3_ws/install/turtlebot3:/home/jstone14/tb3_ws/install/turtlebot3_simulations:/home/jstone14/tb3_ws/install/turtlebot3_bringup:/home/jstone14/tb3_ws/install/turtlebot3_node:/home/jstone14/tb3_ws/install/turtlebot3_navigation2:/home/jstone14/tb3_ws/install/turtlebot3_fake_node:/home/jstone14/tb3_ws/install/turtlebot3_msgs:/home/jstone14/tb3_ws/install/turtlebot3_gazebo:/home/jstone14/tb3_ws/install/turtlebot3_description:/home/jstone14/tb3_ws/install/turtlebot3_cartographer:/home/jstone14/tb3_ws/install/dynamixel_sdk_examples:/home/jstone14/tb3_ws/install/dynamixel_sdk_custom_interfaces:/home/jstone14/tb3_ws/install/dynamixel_sdk:/home/jstone14/tb3_ws/install/turtlebot3_teleop:/home/jstone14/tb3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.028482] (interface_package) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.100195] (-) TimerEvent: {}
+[0.137583] (interface_package) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.148424] (interface_package) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.177042] (interface_package) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.179510] (interface_package) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.185056] (interface_package) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.196294] (interface_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.200330] (-) TimerEvent: {}
+[0.210894] (interface_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.263831] (interface_package) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.265384] (interface_package) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.300593] (-) TimerEvent: {}
+[0.400938] (interface_package) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.402351] (-) TimerEvent: {}
+[0.502955] (-) TimerEvent: {}
+[0.546139] (interface_package) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.603264] (-) TimerEvent: {}
+[0.669815] (interface_package) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):\n'}
+[0.671002] (interface_package) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[0.671515] (interface_package) StderrLine: {'line': b'  interface_package --arguments-file\n'}
+[0.672053] (interface_package) StderrLine: {'line': b'  /home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_adapter__arguments__interface_package.json\n'}
+[0.672544] (interface_package) StderrLine: {'line': b'  --output-dir\n'}
+[0.673041] (interface_package) StderrLine: {'line': b'  /home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_adapter/interface_package\n'}
+[0.673528] (interface_package) StderrLine: {'line': b'  --output-file\n'}
+[0.674049] (interface_package) StderrLine: {'line': b'  /home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/rosidl_adapter/interface_package.idls)\n'}
+[0.674547] (interface_package) StderrLine: {'line': b'  returned error code 1:\n'}
+[0.675051] (interface_package) StderrLine: {'line': b'\n'}
+[0.675553] (interface_package) StderrLine: {'line': b"  Error processing 'int[][] corners' of\n"}
+[0.676037] (interface_package) StderrLine: {'line': b"  'interface_package/ArucoDetectSrv_Request': ''int[]' is an invalid message\n"}
+[0.676872] (interface_package) StderrLine: {'line': b"  name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$''\n"}
+[0.678366] (interface_package) StderrLine: {'line': b'\n'}
+[0.679278] (interface_package) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[0.679734] (interface_package) StderrLine: {'line': b'\n'}
+[0.680225] (interface_package) StderrLine: {'line': b'    File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main\n'}
+[0.680485] (interface_package) StderrLine: {'line': b'      return _run_code(code, main_globals, None,\n'}
+[0.680533] (interface_package) StderrLine: {'line': b'    File "/usr/lib/python3.10/runpy.py", line 86, in _run_code\n'}
+[0.680578] (interface_package) StderrLine: {'line': b'      exec(code, run_globals)\n'}
+[0.680620] (interface_package) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[0.680698] (interface_package) StderrLine: {'line': b'      sys.exit(main())\n'}
+[0.680741] (interface_package) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[0.680783] (interface_package) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[0.680826] (interface_package) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl\n'}
+[0.680867] (interface_package) StderrLine: {'line': b'      return convert_srv_to_idl(\n'}
+[0.680907] (interface_package) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl\n'}
+[0.680960] (interface_package) StderrLine: {'line': b'      srv = parse_service_string(package_name, input_file.stem, content)\n'}
+[0.681038] (interface_package) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 859, in parse_service_string\n'}
+[0.681079] (interface_package) StderrLine: {'line': b'      request_message = parse_message_string(\n'}
+[0.681131] (interface_package) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 520, in parse_message_string\n'}
+[0.681187] (interface_package) StderrLine: {'line': b'      Type(type_string, context_package_name=pkg_name),\n'}
+[0.681228] (interface_package) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 277, in __init__\n'}
+[0.681272] (interface_package) StderrLine: {'line': b'      super(Type, self).__init__(\n'}
+[0.681338] (interface_package) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 205, in __init__\n'}
+[0.681398] (interface_package) StderrLine: {'line': b'      raise InvalidResourceName(\n'}
+[0.681439] (interface_package) StderrLine: {'line': b'\n'}
+[0.681479] (interface_package) StderrLine: {'line': b"  rosidl_adapter.parser.InvalidResourceName: 'int[]' is an invalid message\n"}
+[0.681520] (interface_package) StderrLine: {'line': b"  name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'\n"}
+[0.681559] (interface_package) StderrLine: {'line': b'\n'}
+[0.681609] (interface_package) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.681709] (interface_package) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[0.681787] (interface_package) StderrLine: {'line': b'  CMakeLists.txt:12 (rosidl_generate_interfaces)\n'}
+[0.681831] (interface_package) StderrLine: {'line': b'\n'}
+[0.681888] (interface_package) StderrLine: {'line': b'\x1b[0m\n'}
+[0.681928] (interface_package) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.681978] (interface_package) StdoutLine: {'line': b'See also "/home/jstone14/ENAE450_ws/src/interface_package/build/interface_package/CMakeFiles/CMakeOutput.log".\n'}
+[0.682284] (interface_package) CommandEnded: {'returncode': 1}
+[0.697528] (interface_package) JobEnded: {'identifier': 'interface_package', 'rc': 1}
+[0.703575] (-) TimerEvent: {}
+[0.708839] (-) EventReactorShutdown: {}

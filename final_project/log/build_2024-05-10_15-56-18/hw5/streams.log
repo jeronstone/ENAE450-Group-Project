@@ -1,0 +1,19 @@
+[0.756s] Invoking command in '/home/jstone14/ENAE450_ws/src/build/hw5': PYTHONPATH=/home/jstone14/ENAE450_ws/src/build/hw5/prefix_override:/home/jstone14/ENAE450_ws/src/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jstone14/ENAE450_ws/src/build/hw5/build --no-deps symlink_data
+[1.073s] running develop
+[1.235s] running egg_info
+[1.235s] writing hw5.egg-info/PKG-INFO
+[1.235s] writing dependency_links to hw5.egg-info/dependency_links.txt
+[1.235s] writing entry points to hw5.egg-info/entry_points.txt
+[1.236s] writing requirements to hw5.egg-info/requires.txt
+[1.236s] writing top-level names to hw5.egg-info/top_level.txt
+[1.237s] reading manifest file 'hw5.egg-info/SOURCES.txt'
+[1.238s] writing manifest file 'hw5.egg-info/SOURCES.txt'
+[1.239s] running build_ext
+[1.240s] Creating /home/jstone14/ENAE450_ws/src/install/hw5/lib/python3.10/site-packages/hw5.egg-link (link to .)
+[1.240s] Installing aruco_detect script to /home/jstone14/ENAE450_ws/src/install/hw5/lib/hw5
+[1.241s] Installing wallrider_v1 script to /home/jstone14/ENAE450_ws/src/install/hw5/lib/hw5
+[1.241s] Installing wallrider_v2 script to /home/jstone14/ENAE450_ws/src/install/hw5/lib/hw5
+[1.241s] 
+[1.241s] Installed /home/jstone14/ENAE450_ws/src/build/hw5
+[1.241s] running symlink_data
+[1.275s] Invoked command in '/home/jstone14/ENAE450_ws/src/build/hw5' returned '0': PYTHONPATH=/home/jstone14/ENAE450_ws/src/build/hw5/prefix_override:/home/jstone14/ENAE450_ws/src/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jstone14/ENAE450_ws/src/build/hw5/build --no-deps symlink_data

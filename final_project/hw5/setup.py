@@ -27,6 +27,7 @@ setup(
         'console_scripts': [
             "wallrider_v1 = hw5.wallrider_v1:main",
             "wallrider_v2 = hw5.wallrider_v2:main",
+            "aruco_detect = hw5.aruco_detect:main"
         ],
     },
 )
