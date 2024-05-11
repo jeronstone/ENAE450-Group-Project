@@ -72,9 +72,11 @@ class LabNode(Node):
         # c_i / norm: index / distance from closest object (in any direction)
         n_i = np.argmin(
             casts[NORMSEARCHMIN_I: NORMSEARCHMAX_I]) + NORMSEARCHMIN_I
-        if casts[np.argmin(casts[90:270])] - casts[np.argmin(casts[450:630])] < DELIBERATION:
-            c_i = np.argmin(casts[90:270])
-        else:
+        # if the distance to the left and right is about the same, focus on the right
+        if casts[np.argmin(casts[90:330])] - casts[np.argmin(casts[390:630])] < DELIBERATION:
+            # Takes the closest thing on the right half
+            c_i = np.argmin(casts[:360])
+        else:  # if it is not deciding between two walls, just take the closest wall
             c_i = np.argmin(casts)
         f_i = np.argmin(casts[FWDSEARCHMIN_I: FWDSEARCHMAX_I]) + FWDSEARCHMIN_I
         norm = casts[n_i]
