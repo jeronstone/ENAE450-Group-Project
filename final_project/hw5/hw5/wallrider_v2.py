@@ -9,13 +9,13 @@ import numpy as np
 PI = np.pi  # pi
 DANGER = 0.1625  # unsafe wall radius (m)
 IDEAL = 0.2  # ideal wall following radius (m)
-MAX = 0.5  # max search radius (m)
+MAX = 0.48  # max search radius (m)
 SPEED = 0.5  # normal speed (m/s)
 BACKUP = 0.1  # slower speed for backing up / adjusting (m/s)
 FWD = PI  # direction robot is going (180 degrees) (rad)
 # search between MIN and MAX for closest raycast in front
-FWDSEARCH_MIN = PI * 0.90
-FWDSEARCH_MAX = PI * 1.10
+FWDSEARCH_MIN = PI * 0.9
+FWDSEARCH_MAX = PI * 1.1
 # raycast array index to radians conversion factor
 TO_RAD = PI / 360.0
 HOLD_WEIGHT = 1.0  # angular weighting to consider maintaining distance from wall
@@ -29,7 +29,7 @@ NORMSEARCHMIN_I = int(NORMSEARCH_MIN / TO_RAD)
 NORMSEARCHMAX_I = int(NORMSEARCH_MAX / TO_RAD)
 # some precalculations here
 PUSH_CONST = (IDEAL - DANGER) * 0.75
-PULL_CONST = (MAX - IDEAL) * 0.4
+PULL_CONST = (MAX - IDEAL - 0.0025) * 0.375
 
 FWDSEARCHMIN_I = int(FWDSEARCH_MIN / TO_RAD)
 FWDSEARCHMAX_I = int(FWDSEARCH_MAX / TO_RAD)
@@ -47,8 +47,9 @@ class LabNode(Node):
         # publish movement every so often
         self.cmd_vel_publisher = self.create_publisher(Twist, '/cmd_vel', 10)
         self.timer = self.create_timer(0.01, self.timer_callback)
+        self.last_close = None
         self.last_turn = None
-        self.right = -1.0
+        self.right = 1.0
 
     def timer_callback(self):
         # if we haven't gotten a raycast yet, don't calculate anything
@@ -59,12 +60,12 @@ class LabNode(Node):
         twist.linear.x = SPEED
         twist.linear.y = twist.linear.z = 0.0
         twist.angular.z = 0.0
-        twist.angular.x = twist.angular.y = 0.0
+        twist.angular.x = twist.angular.y = SPEED
         # clip raycasts while applying a convolution to average them out; e.g. sliding window average
         # this is to handle infs (by clipping them) and sharp values (by smoothing)
-        A = np.clip(self.ranges, 0.0, MAX+0.5)
+        A = np.clip(self.ranges, 0.0, MAX+0.1)
         casts = np.convolve(np.concatenate(
-            (A[-5:], A, A[:5])), [0.2] * 5, mode='valid')
+            (A[-2:], A, A[:2])), [0.2] * 5, mode='valid')
         # use argmin to find the minimum's index (and not just the minimum)
         # this is to get the angle from it to do calculations
         # n_i / norm: index / distance from wall
@@ -75,7 +76,7 @@ class LabNode(Node):
         c_i = np.argmin(casts)
         f_i = np.argmin(casts[FWDSEARCHMIN_I: FWDSEARCHMAX_I]) + FWDSEARCHMIN_I
         norm = casts[n_i]
-        self.get_logger().info(f"norm: {norm}")
+        self.get_logger().info(f"norm: {n_i}, close: {c_i}, fwd: {f_i}")
         close = casts[c_i]
         fwd = casts[f_i]
         if close <= DANGER:  # if anything is in our danger zone
@@ -96,7 +97,7 @@ class LabNode(Node):
             theta = f_i * TO_RAD  # calculate angle of raycast
             twist.linear.x = BACKUP  # use BACKUP speed
             # theta - NORM is the angular velocity we need to turn to make NORM on our right/left
-            twist.angular.z = self.right * FOLLOW_WEIGHT * (theta - (NORM + self.right * PI / 2))
+            twist.angular.z = FOLLOW_WEIGHT * (theta - (NORM - self.right * PI / 2))
             self.cmd_vel_publisher.publish(twist)
             return
         # if there is anything in view that is on our right/left, follow it
@@ -107,16 +108,17 @@ class LabNode(Node):
             # scale angular velocity to turn it perp. from wall
             # plus quadratic scaling to maintain ideal distance from wall
             # quadratic -> scales more for objects far away from ideal
-            twist.angular.z = self.right * (FOLLOW_WEIGHT * (theta - (NORM + self.right * PI / 2)) \
-                + HOLD_WEIGHT * (
+            twist.angular.z = (FOLLOW_WEIGHT * (theta - (NORM - self.right * PI / 2)) \
+                + self.right * HOLD_WEIGHT * (
                 ((norm - IDEAL) / PUSH_CONST) ** 2 if norm < IDEAL
                 else -((norm - IDEAL) / PULL_CONST) ** 2))
         # scale so that if turning is urgent, reduce linear speed
-        twist.linear.x *= abs(1 - (2*twist.angular.z / PI) ** 2)
-        '''if self.last_turn and np.abs(casts[540] - casts[180]) > 0.2 and np.abs(twist.angular.z - self.last_turn) > PI / 2:
+        twist.linear.x *= 1 - (2 * twist.angular.z / PI) ** 2
+        if self.last_turn and np.abs(c_i - self.last_close) > 190 and np.abs(c_i - self.last_close) < 300 and casts[360 - self.right * 60] > 0.5:
             twist.angular.z = self.last_turn
             self.right *= -1.0
-        self.last_turn = twist.angular.z'''
+        self.last_turn = twist.angular.z
+        self.last_close = c_i
         # twist.angular.z -= 0.25 * PI * norm
         self.cmd_vel_publisher.publish(twist)
 
