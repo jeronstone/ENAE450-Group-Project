@@ -2,7 +2,7 @@ import os
 from glob import glob
 from setuptools import find_packages, setup
 
-package_name = 'hw5'
+package_name = 'maze'
 
 setup(
     name=package_name,
@@ -25,8 +25,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "wallrider_v1 = hw5.wallrider_v1:main",
-            "wallrider_v2 = hw5.wallrider_v2:main",
+            "wallrider = maze.wallrider:main",
         ],
     },
 )
