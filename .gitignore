@@ -3,3 +3,6 @@ final_project/report/report.fdb_latexmk
 final_project/report/report.fls
 final_project/report/report.log
 final_project/report/report.synctex.gz
+*build/
+*install/
+*log/

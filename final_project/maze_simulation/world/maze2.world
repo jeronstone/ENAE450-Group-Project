@@ -43,10 +43,10 @@
       </ode>
     </physics>
 
-    <model name="tb3_4walls">
+    <model name="maze_2">
       <static>1</static>
       <include>
-        <uri>model://tb3_4walls</uri>
+        <uri>model://maze_2</uri>
       </include>
     </model>
 
