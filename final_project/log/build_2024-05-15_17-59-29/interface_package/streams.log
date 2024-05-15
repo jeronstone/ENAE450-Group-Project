@@ -1,0 +1,44 @@
+[0.108s] Invoking command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/maze_simulation:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/maze:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/lab_package:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/hw5:/opt/ros/humble /usr/bin/cmake /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/interface_package -DCMAKE_INSTALL_PREFIX=/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/interface_package
+[0.118s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.183s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.189s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.210s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.211s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.215s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.223s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.233s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.276s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.277s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.363s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.485s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.662s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.865s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.963s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.976s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.991s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.991s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.991s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[1.005s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.029s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.029s] -- Configured cppcheck include dirs: 
+[1.030s] -- Configured cppcheck exclude dirs and/or files: 
+[1.032s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.036s] -- Added test 'lint_cmake' to check CMake code style
+[1.038s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.055s] -- Added test 'uncrustify' to check C / C++ code style
+[1.055s] -- Configured uncrustify additional arguments: 
+[1.057s] -- Added test 'xmllint' to check XML markup files
+[1.059s] -- Configuring done
+[1.075s] -- Generating done
+[1.078s] -- Build files have been written to: /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/interface_package
+[1.082s] Invoked command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/interface_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/maze_simulation:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/maze:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/lab_package:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/hw5:/opt/ros/humble /usr/bin/cmake /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/interface_package -DCMAKE_INSTALL_PREFIX=/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/interface_package
+[1.083s] Invoking command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/maze_simulation:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/maze:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/lab_package:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/hw5:/opt/ros/humble /usr/bin/cmake --build /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/interface_package -- -j2 -l2
+[1.109s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_generator_c[0m
+[1.110s] [  3%] Built target interface_package__cpp
+[1.120s] [ 12%] Built target interface_package__rosidl_generator_c
+[1.122s] failed to create symbolic link '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/interface_package/ament_cmake_python/interface_package/interface_package' because existing path cannot be removed: Is a directory
+[1.122s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_interface_package.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_interface_package] Error 1
+[1.122s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_interface_package.dir/all] Error 2
+[1.123s] gmake[1]: *** Waiting for unfinished jobs....
+[1.125s] gmake: *** [Makefile:146: all] Error 2
+[1.125s] Invoked command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/interface_package' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/maze_simulation:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/maze:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/lab_package:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/install/hw5:/opt/ros/humble /usr/bin/cmake --build /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/interface_package -- -j2 -l2

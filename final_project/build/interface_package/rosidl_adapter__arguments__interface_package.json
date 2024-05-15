@@ -1,0 +1,6 @@
+{
+  "package_name": "interface_package",
+  "non_idl_tuples": [
+    "/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/interface_package:srv/ArucoDetectSrv.srv"
+  ]
+}

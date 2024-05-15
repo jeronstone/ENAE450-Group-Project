@@ -1,0 +1,7 @@
+[  3%] Built target interface_package__cpp
+failed to create symbolic link '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/interface_package/ament_cmake_python/interface_package/interface_package' because existing path cannot be removed: Is a directory
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_interface_package.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_interface_package] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_interface_package.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 12%] Built target interface_package__rosidl_generator_c
+gmake: *** [Makefile:146: all] Error 2

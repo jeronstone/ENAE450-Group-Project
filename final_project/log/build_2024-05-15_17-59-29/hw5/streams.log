@@ -1,0 +1,61 @@
+[0.414s] Invoking command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5': PYTHONPATH=/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/prefix_override:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build
+[0.603s] running develop
+[0.604s] /home/ros/.local/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[0.604s] !!
+[0.604s] 
+[0.604s]         ********************************************************************************
+[0.604s]         Please avoid running ``setup.py`` and ``easy_install``.
+[0.604s]         Instead, use pypa/build, pypa/installer or other
+[0.604s]         standards-based tools.
+[0.604s] 
+[0.604s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[0.604s]         ********************************************************************************
+[0.604s] 
+[0.604s] !!
+[0.604s]   easy_install.initialize_options(self)
+[0.708s] Removing /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5.egg-link (link to .)
+[0.727s] Invoked command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5' returned '0': PYTHONPATH=/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/prefix_override:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build
+[0.728s] Invoking command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/hw5': PYTHONPATH=/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/prefix_override:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hw5 build --build-base /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build install --record /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/install.log --single-version-externally-managed install_data --force
+[0.847s] running egg_info
+[0.854s] writing ../build/hw5/hw5.egg-info/PKG-INFO
+[0.855s] writing dependency_links to ../build/hw5/hw5.egg-info/dependency_links.txt
+[0.856s] writing entry points to ../build/hw5/hw5.egg-info/entry_points.txt
+[0.856s] writing requirements to ../build/hw5/hw5.egg-info/requires.txt
+[0.857s] writing top-level names to ../build/hw5/hw5.egg-info/top_level.txt
+[0.872s] reading manifest file '../build/hw5/hw5.egg-info/SOURCES.txt'
+[0.873s] writing manifest file '../build/hw5/hw5.egg-info/SOURCES.txt'
+[0.874s] running build
+[0.874s] running build_py
+[0.875s] copying hw5/wallrider_v1.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5
+[0.875s] copying hw5/aruco_detect.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5
+[0.875s] copying hw5/wallrider_v2.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5
+[0.876s] copying hw5/__init__.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5
+[0.876s] running install
+[0.881s] running install_lib
+[0.893s] creating /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5
+[0.894s] copying /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5/wallrider_v1.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5
+[0.894s] copying /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5/aruco_detect.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5
+[0.894s] copying /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5/wallrider_v2.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5
+[0.895s] copying /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5/__init__.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5
+[0.895s] byte-compiling /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5/wallrider_v1.py to wallrider_v1.cpython-310.pyc
+[0.896s] byte-compiling /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5/aruco_detect.py to aruco_detect.cpython-310.pyc
+[0.897s] byte-compiling /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5/wallrider_v2.py to wallrider_v2.cpython-310.pyc
+[0.898s] byte-compiling /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5/__init__.py to __init__.cpython-310.pyc
+[0.898s] running install_data
+[0.899s] copying resource/hw5 -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/ament_index/resource_index/packages
+[0.899s] copying package.xml -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5
+[0.899s] copying launch/tb3_4walls_inside.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+[0.900s] copying launch/p2.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+[0.900s] copying launch/p3.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+[0.901s] copying launch/tb3_4walls_outside.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+[0.901s] copying worlds/tb3_4walls.world -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/worlds
+[0.901s] copying models/tb3_4walls/model.config -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/models/tb3_4walls
+[0.902s] copying models/tb3_4walls/four_walls.sdf -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/models/tb3_4walls
+[0.906s] running install_egg_info
+[0.915s] Copying ../build/hw5/hw5.egg-info to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5-0.0.0-py3.10.egg-info
+[0.916s] running install_scripts
+[0.989s] Installing aruco_detect script to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/hw5
+[0.990s] Installing wallrider_v1 script to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/hw5
+[0.991s] Installing wallrider_v2 script to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/hw5
+[0.991s] writing list of installed files to '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/install.log'
+[1.008s] Invoked command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/hw5' returned '0': PYTHONPATH=/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/prefix_override:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hw5 build --build-base /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build install --record /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/install.log --single-version-externally-managed install_data --force

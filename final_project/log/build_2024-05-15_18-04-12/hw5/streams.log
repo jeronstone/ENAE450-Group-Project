@@ -1,0 +1,38 @@
+[0.485s] Invoking command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/hw5': PYTHONPATH=/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/prefix_override:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hw5 build --build-base /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build install --record /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/install.log --single-version-externally-managed install_data
+[0.626s] running egg_info
+[0.633s] writing ../build/hw5/hw5.egg-info/PKG-INFO
+[0.633s] writing dependency_links to ../build/hw5/hw5.egg-info/dependency_links.txt
+[0.633s] writing entry points to ../build/hw5/hw5.egg-info/entry_points.txt
+[0.634s] writing requirements to ../build/hw5/hw5.egg-info/requires.txt
+[0.634s] writing top-level names to ../build/hw5/hw5.egg-info/top_level.txt
+[0.648s] reading manifest file '../build/hw5/hw5.egg-info/SOURCES.txt'
+[0.649s] writing manifest file '../build/hw5/hw5.egg-info/SOURCES.txt'
+[0.650s] running build
+[0.650s] running build_py
+[0.650s] copying hw5/wallrider_v1.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5
+[0.650s] copying hw5/aruco_detect.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5
+[0.650s] copying hw5/wallrider_v2.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5
+[0.650s] copying hw5/__init__.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5
+[0.650s] running install
+[0.653s] running install_lib
+[0.661s] copying /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build/lib/hw5/aruco_detect.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5
+[0.662s] byte-compiling /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5/aruco_detect.py to aruco_detect.cpython-310.pyc
+[0.662s] running install_data
+[0.662s] copying resource/hw5 -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/ament_index/resource_index/packages
+[0.662s] copying package.xml -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5
+[0.663s] copying launch/tb3_4walls_inside.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+[0.663s] copying launch/p2.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+[0.663s] copying launch/p3.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+[0.663s] copying launch/tb3_4walls_outside.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+[0.663s] copying worlds/tb3_4walls.world -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/worlds
+[0.663s] copying models/tb3_4walls/model.config -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/models/tb3_4walls
+[0.663s] copying models/tb3_4walls/four_walls.sdf -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/models/tb3_4walls
+[0.663s] running install_egg_info
+[0.670s] removing '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5-0.0.0-py3.10.egg-info' (and everything under it)
+[0.670s] Copying ../build/hw5/hw5.egg-info to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5-0.0.0-py3.10.egg-info
+[0.671s] running install_scripts
+[0.742s] Installing aruco_detect script to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/hw5
+[0.742s] Installing wallrider_v1 script to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/hw5
+[0.742s] Installing wallrider_v2 script to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/hw5
+[0.743s] writing list of installed files to '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/install.log'
+[0.759s] Invoked command in '/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/hw5' returned '0': PYTHONPATH=/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/prefix_override:/home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hw5 build --build-base /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/build install --record /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/install.log --single-version-externally-managed install_data

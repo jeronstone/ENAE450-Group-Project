@@ -1,0 +1,4 @@
+srv/ArucoDetectSrv.idl
+srv/ArucoDetectSrv.srv
+srv/ArucoDetectSrv_Request.msg
+srv/ArucoDetectSrv_Response.msg

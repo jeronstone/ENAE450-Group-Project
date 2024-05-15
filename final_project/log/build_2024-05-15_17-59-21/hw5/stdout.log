@@ -1,0 +1,26 @@
+running develop
+running egg_info
+writing hw5.egg-info/PKG-INFO
+writing dependency_links to hw5.egg-info/dependency_links.txt
+writing entry points to hw5.egg-info/entry_points.txt
+writing requirements to hw5.egg-info/requires.txt
+writing top-level names to hw5.egg-info/top_level.txt
+reading manifest file 'hw5.egg-info/SOURCES.txt'
+writing manifest file 'hw5.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/python3.10/site-packages/hw5.egg-link (link to .)
+Installing aruco_detect script to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/hw5
+Installing wallrider_v1 script to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/hw5
+Installing wallrider_v2 script to /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/lib/hw5
+
+Installed /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5
+running symlink_data
+symbolically linking /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/resource/hw5 -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/ament_index/resource_index/packages
+symbolically linking /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/package.xml -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5
+symbolically linking /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/launch/tb3_4walls_inside.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+symbolically linking /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/launch/p2.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+symbolically linking /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/launch/p3.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+symbolically linking /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/launch/tb3_4walls_outside.launch.py -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/launch
+symbolically linking /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/worlds/tb3_4walls.world -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/worlds
+symbolically linking /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/models/tb3_4walls/model.config -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/models/tb3_4walls
+symbolically linking /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/build/hw5/models/tb3_4walls/four_walls.sdf -> /home/ros/rosPackages/ENAE450/ENAE450_ws/src/ENAE450-Group-Project/final_project/install/hw5/share/hw5/models/tb3_4walls
