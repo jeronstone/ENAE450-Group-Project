@@ -41,7 +41,13 @@ FPS = 10.0
 class LabNode(Node):
   def __init__(self):
       super().__init__('wallrider')
-      self.get_logger().info("starting")
+
+      # check for debug param
+      self.declare_parameter('debug', False)
+      self.b_debug = self.get_parameter('debug').get_parameter_value().bool_value
+
+      if self.b_debug: self.get_logger().info("Starting Navigation Node")
+
       # read from scan
       self.scan_subscriber = self.create_subscription(LaserScan,'/scan',self.scan_subscriber_handler, 10)
       # publish movement every so often
@@ -63,11 +69,11 @@ class LabNode(Node):
     A = np.clip(self.ranges, 0.0, MAX+0.1)
     casts = np.convolve(np.concatenate((A[-2:], A, A[:2])), [0.2] * 5, mode = 'valid')
     casts = np.roll(casts, 180)
-    # self.get_logger().info(f'len cast: {len(casts)}')
-    # self.get_logger().info(f'cast [0]: {casts[0]}')
-    # self.get_logger().info(f'cast [90]: {casts[90]}')
-    # self.get_logger().info(f'cast [180]: {casts[180]}')
-    # self.get_logger().info(f'cast [270]: {casts[270]}')
+    if self.b_debug:
+      self.get_logger().info(f'cast [0]: {casts[0]}')
+      self.get_logger().info(f'cast [90]: {casts[90]}')
+      self.get_logger().info(f'cast [180]: {casts[180]}')
+      self.get_logger().info(f'cast [270]: {casts[270]}')
     
     # use argmin to find the minimum's index (and not just the minimum)
     # this is to get the angle from it to do calculations
@@ -84,7 +90,7 @@ class LabNode(Node):
     fwd = casts[f_i]
     # self.get_logger().info(f'{close}')
     if close <= DANGER: # if anything is in our danger zone
-      self.get_logger().info(f'DANGER: {close}')
+      if self.b_debug: self.get_logger().info(f'DANGER: {close}')
       theta = c_i * TO_RAD
       lin_dir = np.cos(theta) ** 3 # move in the opposite direction, 0 if on left/right
       ang_dir = np.sin(theta) # turn away if on the side, 0 if fwd/bkwd
@@ -101,7 +107,7 @@ class LabNode(Node):
       return
     # if there is some thing in front of us, turn left (past IDEAL to turn sooner)
     if fwd <= IDEAL + 0.6*(MAX - IDEAL):
-      self.get_logger().info(f'IN FRONT: {fwd}')
+      if self.b_debug: self.get_logger().info(f'IN FRONT: {fwd}')
       # self.get_logger().info("FWD TURN")
       theta = f_i * TO_RAD # calculate angle of raycast
       twist.linear.x = BACKUP # use BACKUP speed
@@ -113,7 +119,7 @@ class LabNode(Node):
       return
     # if there is anything in view that is on our right, follow it
     if norm < MAX:
-      self.get_logger().info(f'NORM : {norm}')
+      if self.b_debug: self.get_logger().info(f'NORM : {norm}')
       # self.get_lo    self.get_logger().info(f"{len(casts)}")gger().info("FOLLOWING NORM")
       theta = n_i * TO_RAD
       twist.linear.x = SPEED
