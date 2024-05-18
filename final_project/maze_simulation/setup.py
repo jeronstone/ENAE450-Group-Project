@@ -16,6 +16,8 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.*'))),
         (os.path.join('share', package_name, 'world'), glob(os.path.join('world', '*.world*'))),
         (os.path.join('share', package_name, 'models','maze_2'), glob(os.path.join('models','maze_2','*'))),
+        (os.path.join('share', package_name, 'models','maze_1'), glob(os.path.join('models','maze_1','*'))),
+        (os.path.join('share', package_name, 'models','maze_0'), glob(os.path.join('models','maze_0','*'))),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
